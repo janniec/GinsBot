@@ -37,7 +37,7 @@ The LSTM RNN model is particularly useful to process sequences of words. The mod
 See [SUPREMES_BOT.ipynb](https://github.com/janniec/GinsBot/blob/master/notebooks/SUPREMES_BOT.ipynb).
 
 ## Text Generations
-The generations require some interpretation.  Using Gensim's most_similar() function, I explored words that were close proximity within the vectorspace of each word generated. For example, the word 'justice', was in the proximity to 'Constitution', 'rule', and 'law'.  
+The generations require some interpretation.  Using Gensim's most_similar() function, I explored words that were in close proximity (using cosine distance) within the vectorspace of each word generated. For example, the word 'justice', was in the proximity to 'Constitution', 'rule', and 'law'.  
 ##### Example Seed Sentence  
 I fed the following sentence to the Ruth Bader GinsBot model:  
 "use of race discrimination in university admissions policy is lawful to achieve critical mass student body diversity"  
