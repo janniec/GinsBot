@@ -1,7 +1,7 @@
 # Ruth Bader GinsBot & the Supremes  
 With the recent confusion in the United States Supreme Court, due to the ongoing health concerns of Justice [Ruth Bader Ginsburg](https://en.wikipedia.org/wiki/Ruth_Bader_Ginsburg) and the sudden death of Justice [Antonin Scalia](https://en.wikipedia.org/wiki/Antonin_Scalia) in 2016, I explored the idea of immortalizing their unique perspectives through data science and text generation.  
 
-Using a semantic-based word-level long short term memory ('LSTM') Recurrent Neural Network ('RNN'), based on Gensim's Word2Vec library and documents written by each of the two justices, I generated brief simulated [opinions](https://en.wikipedia.org/wiki/Judicial_opinion). The goal was to generate sentence-like structures while tying Word2Vec semantics to each of the words.  
+Using a semantic-based word-level long short term memory ('LSTM') deep recurrent neural network ('RNN'), based on Gensim's Word2Vec library and documents written by each of the two justices, I generated brief simulated [opinions](https://en.wikipedia.org/wiki/Judicial_opinion). The goal was to generate sentence-like structures while tying pre-trained Word2Vec semantics to each of the words.  
 
 For an overview, please see the [presentation](https://docs.google.com/presentation/d/1puuGy_bqB3j-175qPZ7TONECoViH4B311gBVEzOBCUA/edit?usp=sharing) for this model.    
 
