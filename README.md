@@ -20,7 +20,7 @@ Data was scraped using BeautifulSoup from [Legal Information Institute](https://
 See [Scraping_Cornell.ipynb](https://github.com/janniec/GinsBot/blob/master/notebooks/Scraping_Cornell.ipynb).  
 
 ## Pipeline  
-1. Clean and Explore the data.    
+1. Clean and explore the data, stored in MongoDB.    
   * Cleaned using Pymongo in Jupyter Notebook.  
   * Explored and selected areas of law that I wanted to focus on.  
   * Exported selection of case opinions into text files.   
