@@ -3,6 +3,8 @@ With the recent confusion in the United States Supreme Court, due to the ongoing
 
 Using a semantic-based word-level long short term memory ('LSTM') deep recurrent neural network ('RNN'), based on Gensim's Word2Vec library and documents written by each of the two justices, I generated brief simulated [opinions](https://en.wikipedia.org/wiki/Judicial_opinion). The goal was to generate sentence-like structures while tying pre-trained Word2Vec semantics to each of the words.  
 
+<img src="https://github.com/janniec/GinsBot/blob/master/images/ginsbot_goal.png" alt="Ginsbot Goal" align="middle" height=250px>   
+
 For an overview, please see the [presentation](https://docs.google.com/presentation/d/1puuGy_bqB3j-175qPZ7TONECoViH4B311gBVEzOBCUA/edit?usp=sharing) for this model.    
 
 ## Tools
@@ -34,14 +36,16 @@ See [Mongo_Cleaner.ipynb](https://github.com/janniec/GinsBot/blob/master/noteboo
 ## Model  
 The LSTM RNN model is particularly useful to process sequences of words. The model is trained through iterations. Each iteration, the model trains on my text data for a set number of epochs. After each epoch, if the loss improves, the model overwrites and saves a newer version of itself. At the end of each iteration, the model takes in a seed sentence and generates text.  All text generations are saved to a text file. And the iteration will restart.  
 
+<img src="https://github.com/janniec/GinsBot/blob/master/images/ginsbot_scalianator.png" alt="Ginsbot & Scalianator" align="middle" height=250px>   
+
 See [SUPREMES_BOT.ipynb](https://github.com/janniec/GinsBot/blob/master/notebooks/SUPREMES_BOT.ipynb).
 
-## Text Generations
+## Semantic Generations
 The generations require some interpretation.  Using Gensim's most_similar() function, I explored words that were in close proximity (using cosine distance) within the vectorspace of each word generated. For example, the word 'justice', was in the proximity to 'Constitution', 'rule', and 'law'.  
 ##### Example Seed Sentence  
-I fed the following sentence to the Ruth Bader GinsBot model:  
+I fed the following sentence regarding affirmative to the Ruth Bader GinsBot model:  
 "use of race discrimination in university admissions policy is lawful to achieve critical mass student body diversity"  
 ##### Example Generation  
 "the utterly_contemptuous this Predatory_lending_practices Prudence_dictates Prudence_dictates intend Knee_Jerk_reactions"  
 ##### Interpretation  
-Predatory lending practices have been long linked by the U.S. Supreme Court to the discrimination of minorities, for example, through the Fair Housing Act. "intend Knee_Jerk_reactions" implies a need for action.  Ruth Bader Ginsburg has repeatedly voted in favor of raced-based government action to combat the effects of discrimination against minorities.   
+Predatory lending practices has been linked by the U.S. Supreme Court to the discrimination of minorities.  "Prudence_dictates intend Knee_jerk_reactions” implies a need for action. The generation captures Justice Ginsburg's consistent viewpoint that she disapproves of discrimination against minorities and that race-based government action to correct the effects of discrimination is lawful.
