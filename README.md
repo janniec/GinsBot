@@ -13,8 +13,7 @@ For an overview, please see the [presentation](https://docs.google.com/presentat
 * MongoDB  
 * Pymongo  
 * Keras  
-* Gensim  
-* HDF5  
+* Gensim   
 
 ## Data  
 Data was scraped using BeautifulSoup from [Legal Information Institute](https://www.law.cornell.edu/) hosted by Cornell Law School, specifically court opinions written by Justice [Ruth Bader Ginsburg](https://www.law.cornell.edu/supct/justices/ginsburg.dec.html) and Justice [Antonin Scalia](https://www.law.cornell.edu/supct/justices/scalia.dec.html). Further details of all cases were acquired from Washington University Law's [Supreme Court Database](http://supremecourtdatabase.org/data.php).   
